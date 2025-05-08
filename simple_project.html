@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        margin-left: 20px;
+        padding: 20px;
+        border-radius: 15px 50px;
+        box-shadow: 0px 2px 50px;
+        margin-top: 20px;
+    }
+    #btn1{
+        background-color: black;
+        color: yellow;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #btn2{
+        background-color: rgb(238, 233, 233);
+        color: rgb(35, 35, 13);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #btn3{
+        background-color: rgb(196, 3, 3);
+        color: rgb(252, 250, 246);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #btn4{
+        background-color: rgb(188, 13, 109);
+        color: rgb(247, 254, 254);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #btn5{
+        background-color: rgb(215, 222, 12);
+        color: rgb(5, 5, 5);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>welcome to my background color change project</h1>
+    <h1>welcome to my background color change project</h1>
+    <h1>welcome to my background color change project</h1>
+    <h1>welcome to my background color change project</h1>
+    <h1>welcome to my background color change project</h1>
+    <button id="btn1" onclick="colorblack()"> black color</button>
+    <button id="btn2" onclick="colorwhite()"> white color </button>
+    <button id="btn3" onclick="colorred()">red color</button>
+    <button id="btn4" onclick="colorpink()"> pink color </button>
+    <button id="btn5" onclick="coloryellow()"> yellow color </button>
+
+</body>
+<script>
+    const colorblack = () => {
+        document.body.style.backgroundColor = "black";
+        document.querySelectorAll('h1').forEach((e) => e.style.color = "white");
+
+    }
+    const colorwhite = () => {
+        document.body.style.backgroundColor = "white";
+        document.querySelectorAll('h1').forEach((e) => e.style.color = "black");
+    }
+    const colorred = () => {
+        document.body.style.background = "red";
+        document.querySelectorAll('h1').forEach((e) => e.style.color = "black");
+
+    }
+    const colorpink = () => {
+        document.body.style.backgroundColor = "pink";
+        const p = document.querySelectorAll('h1');
+        p.forEach((e) => e.style.color = "red");
+    }
+    const coloryellow = () => {
+        document.body.style.backgroundColor = "yellow";
+        const yw = document.querySelectorAll('h1');
+        yw.forEach((e) => e.style.color = "black");
+    }
+</script>
+
+</html>
