@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            color: rgb(225, 194, 21);
+        }
+
+        h1 {
+            letter-spacing: 5px;
+            margin-top: 300px;
+            border-radius: 10px 50px;
+         
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1> </h1>
+    </div>
+
+</body>
+<script>
+    function showtime() {
+        let d = new Date();
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        let session = "AM";
+        let Time = h + ":" + m + ":" + s + " " + session
+        if (h > 12) {
+            h = h - 12;
+        }
+        if (h >= 12) {
+            session = "pm"
+        }
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        document.querySelector('h1').innerText = Time;
+        setTimeout(showtime, 1000);
+
+    }
+    showtime();
+</script>
+
+</html>
